@@ -87,5 +87,21 @@ fn main() {
 		
 		buffer = "".to_string();
 		cursor.col += 1;
-	}
+	};
+	
+	for d in &v {
+		let x: f64;
+		let y = String::new();
+		match d.num_value {
+			Some(x) => println!("v[{}][{}] = {:?}", d.row, d.col, d.num_value.unwrap()),
+			None => {},
+		};
+		
+		match d.txt_value {
+			Some(_) => {
+				println!("v[{}][{}] = {}", d.row, d.col, d.txt_value.as_ref().unwrap().trim());
+			},
+			None => {},
+		};
+	};
 }
